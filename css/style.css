@@ -1,0 +1,173 @@
+/* Background: */ 
+body{
+    /* Subpage-body: */ 
+    font-family: Roboto;
+    font-weight:400; 
+    font-size: 13px; 
+    color: #000000; 
+    line-height: 19px;
+}
+.main{
+    background-image: radial-gradient(ellipse 50% 100% at 50% 0%, #F7B82B 0%, #EC8213 100%);
+    padding-top: 70px;
+    height: 100vh;
+    overflow: hidden;
+}
+.call-action{ /* Download Now: */ 
+    font-family: Roboto; 
+    font-weight:300; 
+    font-size: 36px; 
+    color: #FFFFFF; 
+    line-height: 42px; 
+}
+
+h1{
+    /* Subpage-header: */ 
+    font-family: Roboto;
+    font-weight:700; 
+    font-size: 13px; 
+    color: #313138; 
+    line-height: 19px; 
+}
+/* Navbar styling -------------------------------------------------------------------*/
+.navbar-toggle{
+    float: left;
+}
+.media-links{
+    float: right;
+    text-align: center;
+    margin:10px auto;
+}
+.logo{
+    width:50%;
+    text-align: center;
+    margin:10px auto;
+}
+.navbar-brand{
+    float:none;
+    padding: 0px;
+}
+.navbar-brand > img{
+        display: inline-block;
+}
+.nav-title{ /* Menu-title: */ 
+
+    font-family: Roboto; 
+    font-weight:400;
+    font-size: 15px; 
+    color: #FFFFFF; 
+    line-height: 22px; 
+}
+.nav-body{ /* Menu-body: */ 
+
+    font-family: Roboto; 
+    font-weight: 300;
+    font-size: 15px; 
+    color: #FFFFFF; 
+    line-height: 22px; 
+}
+.slide-in-nav{ /* Left panel that acts as navbar dropdown */
+    position: absolute;
+    width: 260px;
+    height: 100vh;
+    left:-300px;
+    background-color: #222;
+    transition-duration: 450ms;
+}
+.show{ /* slide in transition for nav */
+    transform: translateX(300px);
+}
+.nav-section{ /* ul styling for nav groups */
+    list-style-type: none;
+
+}
+a {
+    font-family: Roboto; 
+    font-weight:300; 
+    font-size: 15px; 
+    color: #FFFFFF; 
+    line-height: 22px; 
+}
+a:hover, a:focus a:active {
+    font-family: Roboto; 
+    font-weight:300; 
+    font-size: 15px; 
+    color: #FFFFFF; 
+    line-height: 22px; 
+    text-decoration: underline;
+}
+/* keeping the navbar collapsed -------------------------------------------------*/
+@media (min-width:768px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display: block !important;
+    }
+}
+
+
+/* splash page styling --------------------------------------------------------------*/
+.brandish{ /* centering the logo */
+    width: 186px;
+    height: 235px;
+    background: transparent url('../images/brandish_logo.png') 0 0 no-repeat;
+    position:absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+
+}
+.brandish:hover{
+    background: transparent url('../images/brandish_logo_hover.png') 4px 2px no-repeat;
+}
+.brandish:active{
+    box-shadow: none;
+}
+.peek{ /* setting up for effect */
+    height: 176px;
+    width: 246px;
+    background: transparent url('../images/iPhone.png') 0px 0px no-repeat;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+/* effect classes */
+.full-size{ /* expands the phone to the image size, hides the excess*/
+    height: 502px;
+    bottom:-320px;
+}
