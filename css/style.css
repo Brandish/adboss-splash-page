@@ -2,20 +2,27 @@
 body{
     /* Subpage-body: */ 
     font-family: Roboto;
-    font-weight:400; 
+    font-weight: 400; 
     font-size: 13px; 
     color: #000000; 
     line-height: 19px;
 }
+/* mobile sizes have solid color background*/
 .main{
-    background-image: radial-gradient(ellipse 50% 100% at 50% 0%, #F7B82B 0%, #EC8213 100%);
-    padding-top: 70px;
-    height: 100vh;
-    overflow: hidden;
+        background-color:#EC8213;
+        height:100vh;
+        padding: 0px;
+}
+@media (min-width: 768px) { 
+    .main{
+        background-image: radial-gradient(ellipse 50% 100% at 50% 0%, #F7B82B 0%, #EC8213 100%);
+        padding: 70px 25px 0px 25px;
+        height: 100vh;
+    }
 }
 .call-action{ /* Download Now: */ 
     font-family: Roboto; 
-    font-weight:300; 
+    font-weight: 300; 
     font-size: 36px; 
     color: #FFFFFF; 
     line-height: 42px; 
@@ -24,7 +31,7 @@ body{
 h1{
     /* Subpage-header: */ 
     font-family: Roboto;
-    font-weight:700; 
+    font-weight: 700; 
     font-size: 13px; 
     color: #313138; 
     line-height: 19px; 
@@ -53,7 +60,7 @@ h1{
 .nav-title{ /* Menu-title: */ 
 
     font-family: Roboto; 
-    font-weight:400;
+    font-weight: 700;
     font-size: 15px; 
     color: #FFFFFF; 
     line-height: 22px; 
@@ -79,7 +86,6 @@ h1{
 }
 .nav-section{ /* ul styling for nav groups */
     list-style-type: none;
-
 }
 a {
     font-family: Roboto; 
@@ -102,7 +108,7 @@ a:hover, a:focus a:active {
         float: none;
     }
     .navbar-left,.navbar-right {
-        float: none !important;
+        float: none ;
     }
     .navbar-toggle {
         display: block;
@@ -116,10 +122,10 @@ a:hover, a:focus a:active {
         border-width: 0 0 1px;
     }
     .navbar-collapse.collapse {
-        display: none!important;
+        display: none; 
     }
     .navbar-nav {
-        float: none!important;
+        float: none ; 
         margin-top: 7.5px;
     }
     .navbar-nav>li {
@@ -130,44 +136,115 @@ a:hover, a:focus a:active {
         padding-bottom: 10px;
     }
     .collapse.in{
-        display: block !important;
+        display: block ;
     }
 }
 
 
 /* splash page styling --------------------------------------------------------------*/
-.brandish{ /* centering the logo */
-    width: 186px;
-    height: 235px;
-    background: transparent url('../images/brandish_logo.png') 0 0 no-repeat;
-    position:absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+/* Mobile Splash Styling-------------------------------------------*/
+.download-buttons a:hover, .download-mobile a:hover{
+    opacity: 0.8;
+}
+.main-splash{
+    display: none;
+}
+.mobile-splash{
     margin: auto;
+    padding-top: 20%;
+    width:100%;
+    text-align: center;
+    background-color: #EC8213;
+}
+/* hiding the navbar media links and replacing with new ones */
+.media-links{
+    display:none;
+}
+.mobile-media{
+    padding-top: 5%;
+}
+/* Larger Size Splash Styling--------------------------------------*/
+/* Small Devices 768xp and up */
+@media (min-width: 768px) { 
+    .media-links{
+        display: block;
+    }
+    .mobile-media{
+        display: none;
+    }
+    .mobile-splash{
+        display:none;
+    }
+    .main-splash{
+        display:block;
+    }
+    .brandish{ /* centering the logo */
+        width: 186px;
+        height: 235px;
+        background: transparent url('../images/brandish_logo.png') 0 0 no-repeat;
+        position:absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+    }
+    .brandish:hover{
+        background: transparent url('../images/brandish_logo_hover.png') 4px 2px no-repeat;
+    }
+    .brandish:active{
+        box-shadow: none;
+    }
+    .peek{ /* setting up for effect */
+        height: 176px;
+        width: 246px;
+        background: transparent url('../images/iPhone.png') 0px 0px no-repeat;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        
+        margin: auto;
+    }
+    /* effect classes */
+    .full-size{ /* expands the phone to the image size, hides the excess*/
+        height: 502px;
+        bottom: -320px;
+    }
+    div.call-action{
+        height:100px;
+        position: absolute;
+        display: none;
+    }
+    .download-buttons{
+        width:340px;
+        position: absolute;
+        left:50%;
+        margin-left:-170px;
+        display: none;
+    }
+}
 
+/* sub pages styling -------------------------------------------------------------------------*/
+/* mobile text pages */
+.text-page{
+    padding: 70px 5% 0px 5%;
 }
-.brandish:hover{
-    background: transparent url('../images/brandish_logo_hover.png') 4px 2px no-repeat;
+@media (min-width: 768px) { 
+    .text-page{
+        padding: 70px 20% 0px 20%;
+    }
 }
-.brandish:active{
-    box-shadow: none;
+.text-page ul, .text-page ol{
+    margin-left:-27px;
 }
-.peek{ /* setting up for effect */
-    height: 176px;
-    width: 246px;
-    background: transparent url('../images/iPhone.png') 0px 0px no-repeat;
-    position: absolute;
-    z-index: 1;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: auto;
+.text-page a{
+    color: #000000;
 }
-
-/* effect classes */
-.full-size{ /* expands the phone to the image size, hides the excess*/
-    height: 502px;
-    bottom:-320px;
+.italic{
+    font-style: italic;
+}
+.bold{
+    font-weight: 700;
 }
