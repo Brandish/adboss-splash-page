@@ -55,15 +55,22 @@ h1{
     padding: 0px;
 }
 .navbar-brand > img{
-        display: inline-block;
+    display: inline-block;
 }
 .nav-title{ /* Menu-title: */ 
-
     font-family: Roboto; 
     font-weight: 700;
     font-size: 15px; 
     color: #FFFFFF; 
     line-height: 22px; 
+    margin-bottom: 1px;
+    margin-top: 5px;
+}
+@media (min-width:768px) {
+    .nav-title{
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
 }
 .nav-body{ /* Menu-body: */ 
 
@@ -80,6 +87,7 @@ h1{
     left:-300px;
     background-color: #222;
     transition-duration: 450ms;
+    overflow: auto;
 }
 .show{ /* slide in transition for nav */
     transform: translateX(300px);
@@ -247,4 +255,27 @@ a:hover, a:focus a:active {
 }
 .bold{
     font-weight: 700;
+}
+.video-page{
+    text-align: center;
+    padding: 60px 3% 0px 3%;  
+    background-image: radial-gradient(ellipse 50% 100% at 50% 0%, #F7B82B 0%, #EC8213 100%);
+}
+.video-wrap{
+    display: inline-block;
+    width: 100%;
+    margin: -5px -5px -5px -5px;
+    padding:20px;
+   
+}
+@media (min-width:768px) {
+    .video-wrap{
+        display: inline-block;
+        width: 50%;
+        padding: 20px;
+    }
+    .video-page{
+    text-align: center;
+    padding: 60px 10% 0px 10%;  
+}
 }
