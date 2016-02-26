@@ -54,12 +54,12 @@ var Home = (function(){
                     height = phone$.offset();
                     //place the download now text above the phone
                     text$.css({
-                        'top' : (height.top-50)+'px',
+                        'top' : (height.top-90)+'px',
                         'left' : height.left+'px'
                     });
                     //place the download images below the phone
                     buttons$.css({
-                        'top' : (height.top+phoneHeight)+'px'
+                        'top' : (height.top+(phoneHeight+40))+'px'
                     });
                     //fade in the elements
                     text$.fadeIn(fadeSpeed);

@@ -3,9 +3,9 @@ body{
     /* Subpage-body: */ 
     font-family: Roboto;
     font-weight: 400; 
-    font-size: 13px; 
+    font-size: 14px; 
     color: #000000; 
-    line-height: 19px;
+    line-height: 20px;
 }
 /* mobile sizes have solid color background*/
 .main{
@@ -177,6 +177,9 @@ a:hover, a:focus a:active {
     .media-links{
         display: block;
     }
+    .media-links a{
+        padding: 0px 5px;
+    }
     .mobile-media{
         display: none;
     }
@@ -187,7 +190,7 @@ a:hover, a:focus a:active {
         display:block;
     }
     .brandish{ /* centering the logo */
-        width: 186px;
+        width: 238px;
         height: 235px;
         background: transparent url('../images/brandish_logo.png') 0 0 no-repeat;
         position:absolute;
@@ -198,7 +201,7 @@ a:hover, a:focus a:active {
         margin: auto;
     }
     .brandish:hover{
-        background: transparent url('../images/brandish_logo_hover.png') 4px 2px no-repeat;
+        background: transparent url('../images/brandish_logo_hover.png') -4px -2px no-repeat;
     }
     .brandish:active{
         box-shadow: none;
@@ -206,7 +209,7 @@ a:hover, a:focus a:active {
     .peek{ /* setting up for effect */
         height: 176px;
         width: 246px;
-        background: transparent url('../images/iPhone.png') 0px 0px no-repeat;
+        background: transparent url('../images/phone.png') 0px 0px no-repeat;
         position: absolute;
         z-index: 1;
         left: 0px;
@@ -260,6 +263,13 @@ a:hover, a:focus a:active {
     text-align: center;
     padding: 60px 3% 0px 3%;  
     background-image: radial-gradient(ellipse 50% 100% at 50% 0%, #F7B82B 0%, #EC8213 100%);
+}
+.video-page h1{
+    font-family: Roboto; 
+    font-weight: 400; 
+    font-size: 36px; 
+    color: #FFFFFF; 
+    line-height: 42px; 
 }
 .video-wrap{
     display: inline-block;
