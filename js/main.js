@@ -27,7 +27,7 @@ var AllPages = (function(){
 var Home = (function(){
     function phoneSlide(){
         if($('.brandish')){
-            $('#trigger').click(function(){
+            var showPhone = function (){
                 var logo$ = $('#trigger');
                 var phone$ = $('.peek');
                 var buttons$ = $('.download-buttons');
@@ -65,7 +65,11 @@ var Home = (function(){
                     text$.fadeIn(fadeSpeed);
                     buttons$.fadeIn(fadeSpeed);
                 });
-            });
+            };
+
+            setTimeout(function() {
+                showPhone();
+            }, 1500);
         }
     }
     return{
