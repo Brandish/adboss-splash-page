@@ -208,7 +208,7 @@ a:hover, a:focus a:active {
     }
     .peek{ /* setting up for effect */
         height: 176px;
-        width: 246px;
+        width: 252px;
         background: transparent url('../images/phone.png') 0px 0px no-repeat;
         position: absolute;
         z-index: 1;
