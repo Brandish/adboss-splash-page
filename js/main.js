@@ -26,7 +26,7 @@ var AllPages = (function(){
 
 var Home = (function(){
     function phoneSlide(){
-        if($('.brandish')){
+        if($('.brandish').length){
             var showPhone = function (){
                 var logo$ = $('#trigger');
                 var phone$ = $('.peek');
