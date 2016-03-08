@@ -8,6 +8,13 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <script src="js/jquery.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+          !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+          analytics.load("ktMNvT3Rn0anrM7fQRXWWvHh6jpc8MZa");
+          analytics.page('privacy');
+          var link;
+          }}();
+        </script>
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/main.js"></script>
@@ -27,19 +34,50 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <script type="text/javascript">
+                        $('#nav-button').click(function(){
+                            analytics.track('menu_selected', {
+                                action: $('#navbar-slide').hasClass('show') ? 'closed' : 'opened'
+                            });
+                        });
+                    </script>
                     
                     <div class="media-links">
-                        <a role="button" class="navbar-btn" href="https://www.facebook.com/brandishapp/" target="_blank">
+                          <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/brandishapp/" target="_blank">
                             <img src="images/facebook-mono.png"/></a>
+                        <script type="text/javascript">
+                            link = document.getElementById('facebook');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'facebook'
+                            });
+                        </script>
                         
-                        <a role="button" class="navbar-btn" href="https://twitter.com/brandish_app" target="_blank">
+                        <a role="button" id="twitter"class="navbar-btn" href="https://twitter.com/brandish_app" target="_blank">
                            <img src="images/twitter-mono.png"/></a>
-                        
-                        <a role="button" class="navbar-btn" href="https://www.linkedin.com/company/brandish-app/" target="_blank">
+                         <script type="text/javascript">
+                            link = document.getElementById('twitter');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'twitter'
+                            });
+                        </script>
+
+                        <a role="button" id="linkedin" class="navbar-btn" href="https://www.linkedin.com/company/brandish-app/" target="_blank">
                             <img src="images/linkedin-mono.png"/></a>
-                        
-                        <a role="button" class="navbar-btn" href="https://www.instagram.com/brandish_app/" target="_blank">
+                        <script type="text/javascript">
+                            link = document.getElementById('linkedin');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'linkedin'
+                            });
+                        </script>
+
+                        <a role="button" id="instagram" class="navbar-btn" href="https://www.instagram.com/brandish_app/" target="_blank">
                             <img src="images/instagram-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('instagram');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'instagram'
+                            });
+                        </script>
                     </div>
 
                     <div class="logo">
@@ -153,7 +191,20 @@
                     <span class="italic">Do Not Track.</span> Do-Not-Track is a public-private initiative that has developed a “flag” or signal that an Internet user may activate in the user’s browser software to notify websites that the user does not wish to be “tracked” by third-parties as defined by the initiative. The online community has not agreed on what actions, if any, should be taken by the websites that receive the “do not track” signal, and therefore Do-Not-Track is not yet standardized. Our website does not alter its behavior or change its services when it receives a “do-not-track” flag or signal from your browser.
                 </p>
                 <p>
-                    <span class="italic">Your Privacy and Ad Choices.</span> The entire purpose of our app is to serve you targeted advertising, and by downloading this app, you have indicated your consent to interest-based advertising and its associated data collection.  Nevertheless, what we present here are the standard opt-out functionalities for mobile apps and websites.  You can make decisions about your privacy and the ads you receive through the Digital Advertising Alliance mobile app, available in the iOS and Android app store as well as at the following site:  <a href="www.aboutads.info/appchoices">www.aboutads.info/appchoices</a>.  Some of our functionality may rely on your mobile browser, in which case, you may wish to additionally consider the following opt-out: <a href="http://www.aboutads.info/choices/">http://www.aboutads.info/choices/</a>.  The DAA browser opt-out requires that cookies not be blocked in your browser.
+                    <span class="italic">Your Privacy and Ad Choices.</span> The entire purpose of our app is to serve you targeted advertising, and by downloading this app, you have indicated your consent to interest-based advertising and its associated data collection.  Nevertheless, what we present here are the standard opt-out functionalities for mobile apps and websites.  You can make decisions about your privacy and the ads you receive through the Digital Advertising Alliance mobile app, available in the iOS and Android app store as well as at the following site:  <a id="about-ads" href="http://www.aboutads.info/appchoices/">www.aboutads.info/appchoices</a>.
+                    <script type="text/javascript">
+                        link = document.getElementById('about-ads');
+                        analytics.trackLink(link, 'aboutads_link_clicked', {
+                            page: 'appchoices'
+                        });
+                    </script>
+                      Some of our functionality may rely on your mobile browser, in which case, you may wish to additionally consider the following opt-out: <a id="about-ads-choice" href="http://www.aboutads.info/choices/">http://www.aboutads.info/choices/</a>.
+                    <script type="text/javascript">
+                        link = document.getElementById('about-ads-choice');
+                        analytics.trackLink(link, 'aboutads_link_clicked', {
+                            page: 'choices'
+                        });
+                    </script>  The DAA browser opt-out requires that cookies not be blocked in your browser.
                 </p>
                 <h1>Technologies Used</h1>
                 <p>
@@ -184,7 +235,13 @@
                     In our app, you may change any of the Personal Information in your account by navigating to the Settings menu and editing your profile information.
                     <p>
                         If you need any additional assistance please contact us.<br/>
-                        Email: <a href="mailto:privacy@brandish.com">privacy@brandish.com</a>
+                        Email: <a id="stop-link" href="mailto:privacy@brandish.com">privacy@brandish.com</a>
+                        <script type="text/javascript">
+                            link = document.getElementById('stop-link');
+                            analytics.trackLink(link, 'privacy_link_clicked', {
+                                location: 'How You Can Stop Receiving Communications'
+                            });
+                        </script>
                     </p>
                 </p>
                 <p>
@@ -192,11 +249,16 @@
                     39th Floor<br/>
                     New York, NY 10017<br/>
                 </p>
-                <h1>Information from Children Under 13</h1>
+                <h1>Information for Children Under 13</h1>
                 <p>
                     On our website, we do not intentionally gather Personal Information about visitors under the age of 13. If you believe we have inadvertently collected information about your child, please contact us and we will attempt to delete the information.<br/>
-                    Email: <a href="mailto:privacy@brandish.com">privacy@brandish.com</a>
-
+                    Email: <a id="children-link" href="mailto:privacy@brandish.com">privacy@brandish.com</a>
+                    <script type="text/javascript">
+                        link = document.getElementById('children-link');
+                        analytics.trackLink(link, 'privacy_link_clicked', {
+                            location: 'Information for Children Under 13'
+                        });
+                    </script>
                     <p>
                         295 Madison Avenue<br/>
                         39th Floor<br/>
@@ -213,12 +275,24 @@
                 </p>
                 <h1>Your California Privacy Rights</h1>
                 <p>
-                    Under Section 1798.83 of the California Civil Code, residents of California have the right to request from a business, with whom the California resident has an established business relationship, certain information with respect to the types of personal information the business shares with third parties for those third parties' direct marketing purposes, and the identities of the third parties with whom the business has shared such information during the immediately preceding calendar year. To exercise your rights, you may make one request each year by emailing us at privacy@brandish.com with "Request for California Privacy Information" on the subject line and in the body of your message. Be sure to provide in the request sufficient information to properly identify you and/or the members of your family.
+                    Under Section 1798.83 of the California Civil Code, residents of California have the right to request from a business, with whom the California resident has an established business relationship, certain information with respect to the types of personal information the business shares with third parties for those third parties' direct marketing purposes, and the identities of the third parties with whom the business has shared such information during the immediately preceding calendar year. To exercise your rights, you may make one request each year by emailing us at <a id="california-link" href="mailto:privacy@brandish.com">privacy@brandish.com</a>
+                    <script type="text/javascript">
+                        link = document.getElementById('california-link');
+                        analytics.trackLink(link, 'privacy_link_clicked', {
+                            location: 'Your California Privacy Rights'
+                        });
+                    </script> with "Request for California Privacy Information" on the subject line and in the body of your message. Be sure to provide in the request sufficient information to properly identify you and/or the members of your family.
                 </p>
                 <h1>How You Can Reach Us</h1>
                 <p>
                     If you have any questions regarding this Privacy Policy, or to opt-out of receiving information as permitted under this Privacy Policy, please contact us at:<br/>
-                    Email: <a href="mailto:privacy@brandish.com">privacy@brandish.com</a>
+                    Email: <a id="reach-link" href="mailto:privacy@brandish.com">privacy@brandish.com</a>
+                    <script type="text/javascript">
+                        link = document.getElementById('reach-link');
+                        analytics.trackLink(link, 'privacy_link_clicked', {
+                            location: 'How You Can Reach Us'
+                        });
+                    </script>
 
                     <p>
                         295 Madison Avenue<br/>
@@ -228,7 +302,13 @@
                 </p>
                 <h1>How to Request Access to, or the Correction of, Your Personal Information</h1>
                 <p>
-                    Except in limited circumstances governed by law, you may obtain access to and have your Personal Information in our records corrected. A request for access or correction must be made in writing to <a href="mailto:privacy@brandish.com">privacy@brandish.com</a>.
+                    Except in limited circumstances governed by law, you may obtain access to and have your Personal Information in our records corrected. A request for access or correction must be made in writing to <a href="mailto:privacy@brandish.com" id="request-link">privacy@brandish.com</a>.
+                    <script type="text/javascript">
+                        link = document.getElementById('request-link');
+                        analytics.trackLink(link, 'privacy_link_clicked', {
+                            location: 'How to Request Access to, or the Correction of, Your Personal Information'
+                        });
+                    </script>
                 </p>
                 <h1>Privacy Policy Updates</h1>
                 <p>This Privacy Policy is subject to revision and changes, which will be noted here.<br/>
