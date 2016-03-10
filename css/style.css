@@ -215,8 +215,13 @@ a:hover, a:focus a:active {
         left: 0px;
         right: 0px;
         bottom: 0px;
-        
+        overflow:hidden;
         margin: auto;
+    }
+    .peek video{
+        position: absolute;
+        top: 56px;
+        left: 17px;
     }
     /* effect classes */
     .full-size{ /* expands the phone to the image size, hides the excess*/

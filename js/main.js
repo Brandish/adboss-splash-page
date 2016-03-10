@@ -32,6 +32,7 @@ var Home = (function(){
                 var phone$ = $('.peek');
                 var buttons$ = $('.download-buttons');
                 var text$ = $('.call-action');
+                var video$ = $('#video-player');
                 var height = phone$.position();
                 var fadeSpeed = 500;
                 var phoneHeight = 502;
@@ -54,7 +55,7 @@ var Home = (function(){
                     height = phone$.offset();
                     //place the download now text above the phone
                     text$.css({
-                        'top' : (height.top-90)+'px',
+                        'top' : (height.top-60)+'px',
                         'left' : height.left+'px'
                     });
                     //place the download images below the phone
@@ -64,6 +65,7 @@ var Home = (function(){
                     //fade in the elements
                     text$.fadeIn(fadeSpeed);
                     buttons$.fadeIn(fadeSpeed);
+                    video$[0].play();
                 });
             };
 
