@@ -219,6 +219,7 @@ a:hover, a:focus a:active {
         margin: auto;
     }
     .peek video{
+        background-color:#000000;
         position: absolute;
         top: 56px;
         left: 17px;
