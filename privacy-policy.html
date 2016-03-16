@@ -55,7 +55,7 @@
                     </script>
                     
                     <div class="media-links">
-                          <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/brandishapp/" target="_blank">
+                        <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/brandishapp/" target="_blank">
                             <img src="images/facebook-mono.png"/></a>
                         <script type="text/javascript">
                             link = document.getElementById('facebook');
@@ -90,24 +90,31 @@
                               platform: 'instagram'
                             });
                         </script>
+
+                        <a role="button" id="pinterest" class="navbar-btn" href="https://www.pinterest.com/brandishapp/" target="_blank">
+                            <img src="images/pinterest-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('pinterest');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'pinterest'
+                            });
+                        </script>
                     </div>
 
                     <div class="logo">
-                        <a class="navbar-brand" href="./index.html"><img class="nav-image" src="./images/b_logo.png"/></a>
+                        <a class="navbar-brand" href="./index.html"><img class="nav-image" src="images/b_logo.png"/></a>
                     </div>
                 </div>
-            
-               
-
             </div>
           </div>
             <!--navigation items-->
             <div class="slide-in-nav" id="navbar-slide">
                 <ul class="nav-section">
                     <li><h1 class="nav-title">Brandish</h1></li>
+                    <li><a href="./welcome.html">Welcome</a></li>
                     <li><a href="./experience.html">The Experience</a></li>
                     <li><a href="./support.html">Support</a></li>
-                    <li><a href="./our-ads.html">Our Ads</a></li>
+                    <!-- <li><a href="./our-ads.html">Our Ads</a></li> -->
                     <li><a href="./about-us.html">About Us</a></li>
                 </ul>
                 <ul class="nav-section">
@@ -125,8 +132,6 @@
                 </ul>
             </div>
         </nav>
-        
-        
         <!-- nav end -->
 
         <div class="container-fluid text-page">

@@ -91,24 +91,31 @@
                               platform: 'instagram'
                             });
                         </script>
+
+                        <a role="button" id="pinterest" class="navbar-btn" href="https://www.pinterest.com/brandishapp/" target="_blank">
+                            <img src="images/pinterest-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('pinterest');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'pinterest'
+                            });
+                        </script>
                     </div>
 
                     <div class="logo">
                         <a class="navbar-brand" href="./index.html"><img class="nav-image" src="images/b_logo.png"/></a>
                     </div>
                 </div>
-            
-               
-
             </div>
           </div>
             <!--navigation items-->
             <div class="slide-in-nav" id="navbar-slide">
                 <ul class="nav-section">
                     <li><h1 class="nav-title">Brandish</h1></li>
+                    <li><a href="./welcome.html">Welcome</a></li>
                     <li><a href="./experience.html">The Experience</a></li>
                     <li><a href="./support.html">Support</a></li>
-                    <li><a href="./our-ads.html">Our Ads</a></li>
+                    <!-- <li><a href="./our-ads.html">Our Ads</a></li> -->
                     <li><a href="./about-us.html">About Us</a></li>
                 </ul>
                 <ul class="nav-section">
@@ -126,30 +133,46 @@
                 </ul>
             </div>
         </nav>
-        
-        
         <!-- nav end -->
 
         <div class="container-fluid main">
             <div class="main-splash">
                 <a id="trigger" role="button" class="btn brandish"></a>
                 <div class="call-action">Download Now.</div>
-                <div class="peek">
-                    <video id="video-player" width="222px" preload="auto" poster="images/video-cover.jpg">
-                        <source src="video/brandish-phone-video.mp4" type="video/mp4">
-                        <source src="video/brandish-phone-video.ogg" type="video/ogg">
-                        <source src="video/brandish-phone-video.webm" type="video/webm">
-                    </video>
+                <!-- Modal Trigger -->
+                <a data-target="#home-video" role="button" data-toggle="modal">
+                    <div class="peek">
+                        <video id="video-player" width="222px" preload="auto" poster="images/video-cover.jpg">
+                            <source src="video/brandish-phone-video.mp4" type="video/mp4">
+                            <source src="video/brandish-phone-video.ogg" type="video/ogg">
+                            <source src="video/brandish-phone-video.webm" type="video/webm">
+                        </video>
+                    </div>
+                </a>
+                <!-- End modal trigger-->
+                <!-- Start modal-->
+                <div class="modal fade in" id="home-video" tabindex="-1" role="dialog"> 
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                             
+                                <iframe width="100%" height="315" 
+                                    src="https://www.youtube.com/embed/ENrxGGBxmjQ?showinfo=0&rel=0&modestbranding=1&enablejsapi=1" 
+                                    frameborder="0" allowfullscreen>
+                                </iframe>
+                     
+                        </div>
+                    </div>
                 </div>
+                <!-- End modal-->
                 <div class="download-buttons">
-                    <a href="" id="app-store" target="_blank"><img src="images/app_store.png"/></a>
+                    <a href="https://itunes.apple.com/us/app/brandish/id1062359843?ls=1&mt=8" id="app-store" target="_blank"><img src="images/app_store.png"/></a>
                     <script type="text/javascript">
                          link = document.getElementById('app-store');
                         analytics.trackLink(link, 'app_link_clicked', {
                           platform: 'ios'
                         });
                     </script>
-                    <a href="" id="google-play" target="_blank"><img src="images/google_play.png"/></a>
+                    <a href="http://play.google.com/store/apps/details?id=com.brandish" id="google-play" target="_blank"><img src="images/google_play.png"/></a>
                      <script type="text/javascript">
                         link = document.getElementById('google-play');
                         analytics.trackLink(link, 'app_link_clicked', {
@@ -162,16 +185,16 @@
                     <img src="images/brandish_logo.png"/>
                     <h1 class="call-action"> Download Now.</h1> 
                     <div class="download-mobile">
-                        <a href="" id="app-store" target="_blank"><img src="images/app_store.png"/></a>
+                        <a href="https://itunes.apple.com/us/app/brandish/id1062359843?ls=1&mt=8" id="mobile-app-store" target="_blank"><img src="images/app_store.png"/></a>
                         <script type="text/javascript">
-                            var link = document.getElementById('app-store');
+                            var link = document.getElementById('mobile-app-store');
                             analytics.trackLink(link, 'app_link_clicked', {
                               platform: 'ios'
                             });
                         </script>
-                        <a href="" id="google-play" target="_blank"><img src="images/google_play.png"/></a>
+                        <a href="http://play.google.com/store/apps/details?id=com.brandish" id="mobile-google-play" target="_blank"><img src="images/google_play.png"/></a>
                         <script type="text/javascript">
-                            link = document.getElementById('google-play');
+                            link = document.getElementById('mobile-google-play');
                             analytics.trackLink(link, 'app_link_clicked', {
                                 platform: 'android'
                             });
@@ -211,6 +234,15 @@
                             link = document.getElementById('mobile-instagram');
                             analytics.trackLink(link, 'social_media_link_clicked', {
                                 platform: 'instagram'
+                            });
+                        </script>
+
+                        <a role="button" id="mobile-pinterest" class="navbar-btn" href="https://www.pinterest.com/brandishapp/" target="_blank">
+                            <img src="images/pinterest-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('mobile-pinterest');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'pinterest'
                             });
                         </script>
                     </div>

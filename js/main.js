@@ -26,7 +26,7 @@ var AllPages = (function(){
 
 var Home = (function(){
     function phoneSlide(){
-        if($('.brandish').length){
+        if($('.brandish').length != -1){
             var showPhone = function (){
                 var logo$ = $('#trigger');
                 var phone$ = $('.peek');
@@ -66,9 +66,19 @@ var Home = (function(){
                     text$.fadeIn(fadeSpeed);
                     buttons$.fadeIn(fadeSpeed);
                     video$[0].play();
-                });
+                }); 
             };
-
+            //logic for video player start/stop
+            $("#home-video").on('show.bs.modal', function () {
+                 //get the iframe associated with the modal that was opened and play it
+                var $iframe = $(this).find("iframe")[0];
+                $iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            });
+            $("#home-video").on('hidden.bs.modal', function () {
+                    //get the iframe associated with the modal that was closed and pause it
+                    var $iframe = $(this).find("iframe")[0];
+                    $iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            });
             setTimeout(function() {
                 showPhone();
             }, 1500);
