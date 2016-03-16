@@ -54,8 +54,8 @@
                         });
                     </script>
                     
-                   <div class="media-links">
-                          <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/brandishapp/" target="_blank">
+                    <div class="media-links">
+                        <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/brandishapp/" target="_blank">
                             <img src="images/facebook-mono.png"/></a>
                         <script type="text/javascript">
                             link = document.getElementById('facebook');
@@ -90,24 +90,31 @@
                               platform: 'instagram'
                             });
                         </script>
+
+                        <a role="button" id="pinterest" class="navbar-btn" href="https://www.pinterest.com/brandishapp/" target="_blank">
+                            <img src="images/pinterest-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('pinterest');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'pinterest'
+                            });
+                        </script>
                     </div>
 
                     <div class="logo">
-                        <a class="navbar-brand" href="./index.html"><img class="nav-image" src="./images/b_logo.png"/></a>
+                        <a class="navbar-brand" href="./index.html"><img class="nav-image" src="images/b_logo.png"/></a>
                     </div>
                 </div>
-            
-               
-
             </div>
           </div>
             <!--navigation items-->
             <div class="slide-in-nav" id="navbar-slide">
                 <ul class="nav-section">
                     <li><h1 class="nav-title">Brandish</h1></li>
+                    <li><a href="./welcome.html">Welcome</a></li>
                     <li><a href="./experience.html">The Experience</a></li>
                     <li><a href="./support.html">Support</a></li>
-                    <li><a href="./our-ads.html">Our Ads</a></li>
+                    <!-- <li><a href="./our-ads.html">Our Ads</a></li> -->
                     <li><a href="./about-us.html">About Us</a></li>
                 </ul>
                 <ul class="nav-section">
@@ -125,26 +132,33 @@
                 </ul>
             </div>
         </nav>
-        
-        
         <!-- nav end -->
 
         <div class="container-fluid text-page">
             <h1>CREATING AN ACCOUNT AND USERNAME </h1>
                 <p>
-                    To get started, download the Brandish app from the iTunes App Store for iOS or from the Google Play Store for Android. Then follow the steps below to sign up for a new account.
+                    To get started, download the Brandish app from the <a href="https://itunes.apple.com/us/app/brandish/id1062359843?ls=1&mt=8" id="app-store" target="_blank">iTunes App Store</a>
+                        <script type="text/javascript">
+                            var link = document.getElementById('mobile-app-store');
+                            analytics.trackLink(link, 'app_link_clicked', {
+                              platform: 'ios'
+                            });
+                        </script> for iOS or from the <a href="http://play.google.com/store/apps/details?id=com.brandish" id="mobile-google-play" target="_blank">Google Play Store</a>
+                        <script type="text/javascript">
+                            link = document.getElementById('mobile-google-play');
+                            analytics.trackLink(link, 'app_link_clicked', {
+                                platform: 'android'
+                            });
+                        </script> for Android. Then follow the steps below to sign up for a new account.
                     <ol>
                         <li>On the Welcome screen, tap 'SIGN UP.'</li>
-
                         <li>Tap the field that says 'Email Address' and enter a valid email address. It's important to have a valid email address associated with your account. If you forget your password, your email address can be used to reset it.</li>
                         <li>Tap the field that says 'Password' and enter a secure password. Your password must be at least 8 characters.</li>
                         <li>Choose your username. Your username is your identity on Brandish. Make it something unique to you and remember that you cannot change your username once you have set it.</li>
-                        <li>Verify your phone number. This step is optional, and you can verify your phone number at any time. If you ever forget your password, we can send a password reset text to your verified phone number.</li>
-                        <li>Lastly, prove you're not a robot! Once you've completed this step you're ready to begin your Brandish Experience! </li>
+                        <li>Date of birth and gender. This step is optional, but it’s great to know more about our users so we can personalize your experience</li>
                     </ol>
                     <h1>ADVANCED TIPS!</h1>
                     <p> If your preferred email address changes, you can update and re-verify the e-mail linked to your account in Settings.</p>
-                    <p>If you verify your phone number you can enable Login Verification to help make your account more secure.</p>
                 </p>
         </div>
       

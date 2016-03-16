@@ -36,6 +36,14 @@ h1{
     color: #313138; 
     line-height: 19px; 
 }
+h2{
+    /* Subpage-header: */
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 13px;
+    color: #313138;
+    margin-top: 21px;
+}
 /* Navbar styling -------------------------------------------------------------------*/
 .navbar-toggle{
     float: left;
@@ -293,5 +301,17 @@ a:hover, a:focus a:active {
     .video-page{
     text-align: center;
     padding: 60px 10% 0px 10%;  
+    }
+    .modal-dialog{
+        margin: 20% auto auto;
+    }
 }
+.modal-content{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }

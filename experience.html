@@ -55,7 +55,7 @@
                     </script>
                     
                     <div class="media-links">
-                          <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/brandishapp/" target="_blank">
+                        <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/brandishapp/" target="_blank">
                             <img src="images/facebook-mono.png"/></a>
                         <script type="text/javascript">
                             link = document.getElementById('facebook');
@@ -90,18 +90,49 @@
                               platform: 'instagram'
                             });
                         </script>
+
+                        <a role="button" id="pinterest" class="navbar-btn" href="https://www.pinterest.com/brandishapp/" target="_blank">
+                            <img src="images/pinterest-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('pinterest');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'pinterest'
+                            });
+                        </script>
                     </div>
 
                     <div class="logo">
-                        <a class="navbar-brand" href="./index.html"><img class="nav-image" src="./images/b_logo.png"/></a>
+                        <a class="navbar-brand" href="./index.html"><img class="nav-image" src="images/b_logo.png"/></a>
                     </div>
                 </div>
-            
-               
-
             </div>
           </div>
             <!--navigation items-->
+            <div class="slide-in-nav" id="navbar-slide">
+                <ul class="nav-section">
+                    <li><h1 class="nav-title">Brandish</h1></li>
+                    <li><a href="./welcome.html">Welcome</a></li>
+                    <li><a href="./experience.html">The Experience</a></li>
+                    <li><a href="./support.html">Support</a></li>
+                    <!-- <li><a href="./our-ads.html">Our Ads</a></li> -->
+                    <li><a href="./about-us.html">About Us</a></li>
+                </ul>
+                <ul class="nav-section">
+                    <li><h1 class="nav-title">Advertise</h1></li>
+                    <li><a href="./inquiries.html">Inquiries</a></li>
+                </ul>
+                <ul class="nav-section">
+                    <li><h1 class="nav-title">Community</h1></li>
+                    <li><a href="./community-guidelines.html">Guidelines</a></li>
+                </ul>
+                <ul class="nav-section">
+                    <li><h1 class="nav-title">Legal</h1></li>
+                    <li><a href="./terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- nav end -->
             <div class="slide-in-nav" id="navbar-slide">
                 <ul class="nav-section">
                     <li><h1 class="nav-title">Brandish</h1></li>
@@ -132,17 +163,33 @@
         <div class="container-fluid text-page">
             <h1>THE BRANDISH EXPERIENCE </h1>
                 <p>
-                    Let’s go over a few of our great features that will enhance your Brandish viewing experience:  Feed, Want it? Have it! and Explore:
-
-                    <p>The “Feed” will create a truly custom and unique user experience. Simply  select the “plus”  icon found next to any video you like and this will add that category to your personal feed. Everyday you will receive the most relevant videos in your favorite selected categories. Get updates, new product releases and the latest content from only the categories you selected! Brandish makes sure you’ll never miss anything again!
-                    </p>
-
-                    <p>Want it? Have it!” brings together your friends in the Brandish community. See a product you Want? Or already have? Just select either the “Want it” or “Have it” button and begin the conversation! See who already has it or who wants it! Share you wants and haves with your friends! It’s easy and fun!
-                    </p>
-
-                    <p>“Explore” is your gateway to the most popular products and videos on the Brandish today! Simply select a category and start scrolling to discover what’s new!
-                    </p>
-
+                    Let’s go over a few of our great features that will enhance your Brandish viewing experience:  The Feed, Want it? Have it! and Explore:
+                    
+                    <ul>
+                        <li>
+                            <p>
+                                The <span class="bold">PLUS ICON</span> get’s you started. It takes you to the categories and let’s you personalize the content that interests you. Select only what you really like or if you love everything, just <span class="bold">SELECT ALL</span>.
+                            </p>
+                        </li>
+                    </ul>
+                        <p>Now this is where the magic of Brandish begins….</p>
+                    <ul>
+                        <li>
+                            <p>
+                                The“Feed” is your connection to all of your selected interests. It’s where you will find amazing experiences daily, providing you with the newest and most relevant <span class="bold">HIGH QUALITY</span> videos. Everyday there will be new content, just for you! Brandish makes sure you’ll never miss anything again!
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                “Want it? Have it!” After watching a video, you can click “Want it or Have it” and join the Brandish Social community. Simply slide to discover who already has it or who wants it! Share you wants and haves with your friends. This feature allows you to share your interests with your friends on all of the social channels (Facebook, Snapchat, twitter and of course, Brandish) as well as give feedback, get real time reviews, make a wish list and start conversations around the products you love. It’s easy and fun!
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                “Explore” is your gateway to the all of the videos on the Brandish, unfiltered. If you see something you like, simply press the plus icon under the video and that category will be automatically added to your feed.
+                            </p>
+                        </li>
+                    </ul>
                     <p>Thanks again for downloading Brandish!</p>
                 </p>
                 <h1>HAVING A PROBLEM?</h1>
@@ -152,7 +199,7 @@
                     link = document.getElementById('contact-link');
                     analytics.trackLink(link, 'support_link_clicked', {});
                 </script>
-                 and we will do our best to make your experience the best it can be!</p>
+                 and we will do our best to make sure your experience is problem free.</p>
         </div>
       
     </body>
