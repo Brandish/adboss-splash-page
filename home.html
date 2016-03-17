@@ -39,17 +39,50 @@
                     </button>
                     
                     <div class="media-links">
-                        <a role="button" class="navbar-btn" href="https://www.facebook.com/BRANDISHGroup" target="_blank">
-                            <img src="images/facebook.png"/></a>
+                        <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/realbrandish/?ref=hl" target="_blank">
+                            <img src="images/facebook-mono.png"/></a>
+                        <script type="text/javascript">
+                            link = document.getElementById('facebook');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'facebook'
+                            });
+                        </script>
                         
-                        <a role="button" class="navbar-btn" href="https://twitter.com/RealBrandish" target="_blank">
-                           <img src="images/twitter.png"/></a>
-                        
-                        <a role="button" class="navbar-btn" href="https://www.linkedin.com/company/brandish-app/" target="_blank">
-                            <img src="images/linked_in.png"/></a>
-                        
-                        <a role="button" class="navbar-btn" href="https://www.instagram.com/realbrandish/" target="_blank">
-                            <img src="images/instagram.png"/></a>
+                        <a role="button" id="twitter"class="navbar-btn" href="https://twitter.com/RealBrandish" target="_blank">
+                           <img src="images/twitter-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('twitter');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'twitter'
+                            });
+                        </script>
+
+                        <a role="button" id="linkedin" class="navbar-btn" href="https://www.linkedin.com/company/brandish-app/" target="_blank">
+                            <img src="images/linkedin-mono.png"/></a>
+                        <script type="text/javascript">
+                            link = document.getElementById('linkedin');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'linkedin'
+                            });
+                        </script>
+
+                        <a role="button" id="instagram" class="navbar-btn" href="https://www.instagram.com/realbrandish/" target="_blank">
+                            <img src="images/instagram-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('instagram');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'instagram'
+                            });
+                        </script>
+
+                        <a role="button" id="pinterest" class="navbar-btn" href="https://www.pinterest.com/realbrandish/" target="_blank">
+                            <img src="images/pinterest-mono.png"/></a>
+                         <script type="text/javascript">
+                            link = document.getElementById('pinterest');
+                            analytics.trackLink(link, 'social_media_link_clicked', {
+                              platform: 'pinterest'
+                            });
+                        </script>
                     </div>
 
                     <div class="logo">
