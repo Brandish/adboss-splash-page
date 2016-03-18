@@ -306,12 +306,14 @@ a:hover, a:focus a:active {
         height:100%;
         margin:auto;
         display:table;
+        width:90%;
     }
 }
 .modal-content{
     display: table-cell;
     vertical-align: middle;
     height:auto;
+
     box-shadow: none;
     -webkit-box-shadow: none;
     background-color: transparent;
@@ -319,4 +321,17 @@ a:hover, a:focus a:active {
     border-radius: 0;
     box-shadow: none;
     -webkit-box-shadow: none;
+}
+.modal-header{
+    padding:1px;
+    border: 0px;
+}
+.modal-header .close{
+    color:#EC8213;
+    text-shadow:none;
+    opacity: 0.95;
+}
+.modal-header .close:hover{
+    color:#EC8213;
+    opacity: 0.7;
 }

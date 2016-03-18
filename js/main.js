@@ -70,14 +70,14 @@ var Home = (function(){
             };
             //logic for video player start/stop
             $("#home-video").on('show.bs.modal', function () {
-                 //get the iframe associated with the modal that was opened and play it
-                var $iframe = $(this).find("iframe")[0];
-                $iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                 //play the big video on the home page
+               $("#main-video-player")[0].play();
+               
             });
             $("#home-video").on('hidden.bs.modal', function () {
-                    //get the iframe associated with the modal that was closed and pause it
-                    var $iframe = $(this).find("iframe")[0];
-                    $iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                    //pause the big video on the home page
+                  $("#main-video-player")[0].pause();
+                   
             });
             setTimeout(function() {
                 showPhone();
