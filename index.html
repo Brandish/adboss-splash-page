@@ -153,10 +153,13 @@
                 <div class="modal fade in" id="home-video" tabindex="-1" role="dialog"> 
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                                <iframe width="750px" height="422px" 
-                                    src="https://www.youtube.com/embed/jdbpYR3Qhe0?showinfo=0&rel=0&modestbranding=1&enablejsapi=1" 
-                                    frameborder="0" allowfullscreen>
-                                </iframe>
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> X </button>
+                            </div>
+                                <video id="main-video-player" controls width="100%" preload="auto" >
+                                    <source src="video/Brandish_main_info.mp4" type="video/mp4">
+                                    <source src="video/Brandish_main_info.webm" type="video/webm">
+                                </video>
                         </div>
                     </div>
                 </div>
