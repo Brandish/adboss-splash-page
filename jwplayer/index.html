@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>JWPlayer &amp; Brandish</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="jwplayer-7.3.6/jwplayer.js"></script>
+</head>
+
+<body>
+    <div id="myElement">Loading the player...</div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        jwplayer.key = "KenNUbYgBPF33+3ht417uBi3MtEiDtcfDWZZ2zue7uLXesmLigNKjLlh5/A=";
+        var playerInstance = jwplayer("myElement");
+        playerInstance.setup({
+            file: "//www.youtube.com/watch?v=jdbpYR3Qhe0",
+            width: 300,
+            height: 320
+        });
+    });
+    </script>
+</body>
+
+</html>
