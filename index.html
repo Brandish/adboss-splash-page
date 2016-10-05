@@ -4,9 +4,9 @@
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Brandish: Discover what’s new from your favorite brands</title>
-        <meta name="Description" content="Brandish's purpose is to be the ultimate platform that explores what’s new from your beloved brands. Brandish magnifies the soul of the brand."/>
-        <meta name="Keywords" content="brandish, brandishapp, brandish app, brands, loyalty, customers, ads, advertisement, tv, publicity"/>
+        <title>Ad Boss: Discover what’s new from your favorite brands</title>
+        <meta name="Description" content="Ad Boss' purpose is to be the ultimate platform that explores what’s new from your beloved brands. Ad Boss magnifies the soul of the brand."/>
+        <meta name="Keywords" content="adboss, adbossapp, ad boss app, ad boss, brands, loyalty, customers, ads, advertisement, tv, publicity"/>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <script src="js/jquery.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -55,8 +55,9 @@
                     </script>
                     
                     <div class="media-links">
-                        <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/realbrandish/?ref=hl" target="_blank">
-                            <img src="images/facebook-mono.png"/></a>
+                        <a role="button" id="facebook" class="navbar-btn" href="https://www.facebook.com/AdBossApp" 
+                            target="_blank">
+                            <img src="images/facebook.png" class="navbar-btn-img"/></a>
                         <script type="text/javascript">
                             link = document.getElementById('facebook');
                             analytics.trackLink(link, 'social_media_link_clicked', {
@@ -64,8 +65,9 @@
                             });
                         </script>
                         
-                        <a role="button" id="twitter"class="navbar-btn" href="https://twitter.com/RealBrandish" target="_blank">
-                           <img src="images/twitter-mono.png"/></a>
+                        <a role="button" id="twitter" class="navbar-btn" href="https://twitter.com/AdBossApp" 
+                            target="_blank">
+                           <img src="images/twitter.png" class="navbar-btn-img"/></a>
                          <script type="text/javascript">
                             link = document.getElementById('twitter');
                             analytics.trackLink(link, 'social_media_link_clicked', {
@@ -73,36 +75,21 @@
                             });
                         </script>
 
-                        <a role="button" id="linkedin" class="navbar-btn" href="https://www.linkedin.com/company/brandish-app/" target="_blank">
-                            <img src="images/linkedin-mono.png"/></a>
-                        <script type="text/javascript">
-                            link = document.getElementById('linkedin');
-                            analytics.trackLink(link, 'social_media_link_clicked', {
-                              platform: 'linkedin'
-                            });
-                        </script>
-
-                        <a role="button" id="instagram" class="navbar-btn" href="https://www.instagram.com/realbrandish/" target="_blank">
-                            <img src="images/instagram-mono.png"/></a>
+                        <a role="button" id="instagram" class="navbar-btn" href="https://www.instagram.com/AdBossApp/" 
+                            target="_blank">
+                            <img src="images/instagram.png" class="navbar-btn-img"/></a>
                          <script type="text/javascript">
                             link = document.getElementById('instagram');
                             analytics.trackLink(link, 'social_media_link_clicked', {
                               platform: 'instagram'
                             });
                         </script>
-
-                        <a role="button" id="pinterest" class="navbar-btn" href="https://www.pinterest.com/realbrandish/" target="_blank">
-                            <img src="images/pinterest-mono.png"/></a>
-                         <script type="text/javascript">
-                            link = document.getElementById('pinterest');
-                            analytics.trackLink(link, 'social_media_link_clicked', {
-                              platform: 'pinterest'
-                            });
-                        </script>
                     </div>
 
                     <div class="logo">
-                        <a class="navbar-brand" href="./index.html"><img class="nav-image" src="images/b_logo.png"/></a>
+                        <a class="navbar-brand" href="./index.html">
+                            <img class="nav-image" src="images/AdBossLogo.png"/>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -110,7 +97,7 @@
             <!--navigation items-->
             <div class="slide-in-nav" id="navbar-slide">
                 <ul class="nav-section">
-                    <li><h1 class="nav-title">Brandish</h1></li>
+                    <li><h1 class="nav-title">Ad Boss</h1></li>
                     <li><a href="./welcome.html">About Us</a></li>
                     <li><a href="./experience.html">The Experience</a></li>
                     <li><a href="./support.html">Support</a></li>
@@ -136,19 +123,7 @@
 
         <div class="container-fluid main">
             <div class="main-splash">
-                <a id="trigger" role="button" class="btn brandish"></a>
-                <div class="call-action">Download Now.</div>
-                <!-- Modal Trigger -->
-                <a data-target="#home-video" role="button" data-toggle="modal">
-                    <div class="peek">
-                        <video id="video-player" width="222px" preload="auto" poster="images/video-cover.jpg">
-                            <source src="video/brandish-phone-video.mp4" type="video/mp4">
-                            <source src="video/brandish-phone-video.ogg" type="video/ogg">
-                            <source src="video/brandish-phone-video.webm" type="video/webm">
-                        </video>
-                    </div>
-                </a>
-                <!-- End modal trigger-->
+
                 <!-- Start modal-->
                 <div class="modal fade in" id="home-video" tabindex="-1" role="dialog"> 
                     <div class="modal-dialog" role="document">
@@ -156,23 +131,27 @@
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"> X </button>
                             </div>
-                                <video id="main-video-player" controls width="100%" preload="auto" >
-                                    <source src="video/Brandish_main_info.mp4" type="video/mp4">
-                                    <source src="video/Brandish_main_info.webm" type="video/webm">
-                                </video>
                         </div>
                     </div>
                 </div>
                 <!-- End modal-->
+
+                <div style="width: 80vw; margin: auto;">
+                    <video id="main-video-player" controls width="100%" preload="auto" >
+                        <source src="video/Brandish_main_info.mp4" type="video/mp4">
+                        <source src="video/Brandish_main_info.webm" type="video/webm">
+                    </video>
+                </div>
+
                 <div class="download-buttons">
-                    <a href="https://itunes.apple.com/us/app/brandish/id1062359843?ls=1&mt=8" id="app-store" target="_blank"><img src="images/app_store.png"/></a>
+                    <a href="https://itunes.apple.com/us/app/brandish/id1062359843?ls=1&mt=8" id="app-store" target="_blank"><img src="images/mac-app.png"/></a>
                     <script type="text/javascript">
                          link = document.getElementById('app-store');
                         analytics.trackLink(link, 'app_link_clicked', {
                           platform: 'ios'
                         });
                     </script>
-                    <a href="http://play.google.com/store/apps/details?id=com.brandish" id="google-play" target="_blank"><img src="images/google_play.png"/></a>
+                    <a href="http://play.google.com/store/apps/details?id=com.brandish" id="google-play" target="_blank"><img src="images/google-play.png"/></a>
                      <script type="text/javascript">
                         link = document.getElementById('google-play');
                         analytics.trackLink(link, 'app_link_clicked', {
@@ -180,6 +159,7 @@
                         });
                     </script>
                 </div>
+
             </div>
             <div class="mobile-splash">
                     <img src="images/brandish_logo.png"/>

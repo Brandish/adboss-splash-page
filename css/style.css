@@ -9,13 +9,13 @@ body{
 }
 /* mobile sizes have solid color background*/
 .main{
-        background-color:#EC8213;
+        background-color:#536478;
         height:100vh;
         padding: 0px;
 }
 @media (min-width: 768px) { 
     .main{
-        background-image: radial-gradient(ellipse 50% 100% at 50% 0%, #F7B82B 0%, #EC8213 100%);
+        background-image: radial-gradient(ellipse 50% 100% at 50% 0%, #3a4d64 0%, #536478 100%);
         padding: 70px 25px 0px 25px;
         height: 100vh;
     }
@@ -52,6 +52,11 @@ h2{
     float: right;
     text-align: center;
     margin:10px auto;
+    margin-top: 15px;
+}
+.navbar-btn-img {
+    width: 40px;
+    height: 40px;
 }
 .logo{
     width:50%;
@@ -64,6 +69,7 @@ h2{
 }
 .navbar-brand > img{
     display: inline-block;
+    height: 64px;
 }
 .nav-title{ /* Menu-title: */ 
     font-family: Roboto; 
@@ -93,7 +99,7 @@ h2{
     width: 260px;
     height: 100vh;
     left:-300px;
-    background-color: #222;
+    background-color: #3a4d64;
     transition-duration: 450ms;
     overflow: auto;
 }
@@ -122,6 +128,7 @@ a:hover, a:focus a:active {
 @media (min-width:768px) {
     .navbar-header {
         float: none;
+        background-color: #3a4d64;
     }
     .navbar-left,.navbar-right {
         float: none ;
@@ -136,6 +143,7 @@ a:hover, a:focus a:active {
     .navbar-fixed-top {
         top: 0;
         border-width: 0 0 1px;
+        background-color: #3a4d64;
     }
     .navbar-collapse.collapse {
         display: none; 
@@ -217,7 +225,6 @@ a:hover, a:focus a:active {
     .peek{ /* setting up for effect */
         height: 176px;
         width: 252px;
-        background: transparent url('../images/phone.png') 0px 0px no-repeat;
         position: absolute;
         z-index: 1;
         left: 0px;
