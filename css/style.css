@@ -250,11 +250,10 @@ a:hover, a:focus a:active {
         display: none;
     }
     .download-buttons{
-        width:340px;
+        width:500px;
         position: absolute;
         left:50%;
         margin-left:-170px;
-        display: none;
     }
 }
 
