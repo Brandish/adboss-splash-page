@@ -16,8 +16,9 @@ body{
 @media (min-width: 768px) { 
     .main{
         background-image: radial-gradient(ellipse 50% 100% at 50% 0%, #3a4d64 0%, #536478 100%);
-        padding: 70px 25px 0px 25px;
-        height: 100vh;
+        /*padding: 70px 25px 0px 25px;*/
+        height: 120vh;
+        overflow: scroll;
     }
 }
 .call-action{ /* Download Now: */ 
@@ -168,17 +169,17 @@ a:hover, a:focus a:active {
 /* splash page styling --------------------------------------------------------------*/
 /* Mobile Splash Styling-------------------------------------------*/
 .download-buttons a:hover, .download-mobile a:hover{
-    opacity: 0.8;
+    opacity: 1.0;
 }
 .main-splash{
-    display: none;
+    /*display: none;*/
 }
 .mobile-splash{
     margin: auto;
     padding-top: 20%;
     width:100%;
     text-align: center;
-    background-color: #EC8213;
+    background-color: #536478;
 }
 /* hiding the navbar media links and replacing with new ones */
 .media-links{
@@ -249,12 +250,14 @@ a:hover, a:focus a:active {
         position: absolute;
         display: none;
     }
-    .download-buttons{
-        width:500px;
-        position: absolute;
-        left:50%;
-        margin-left:-170px;
-    }
+}
+
+.download-buttons{
+    width:400px;
+    margin: auto;
+    position: relative;
+    /*margin-left:-170px;*/
+    margin-top: 20px;
 }
 
 /* sub pages styling -------------------------------------------------------------------------*/
